@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Salud y Nutrición</title>
   <style>
-    /* General body style */
     body {
       font-family: 'Arial', sans-serif;
       margin: 0;
@@ -13,24 +12,14 @@
       background-color: #f9f9f9;
       color: #333;
     }
-
-    /* Header */
     header {
       background: linear-gradient(to right, #4CAF50, #81C784);
       color: white;
       text-align: center;
       padding: 50px 20px;
     }
-    header h1 {
-      font-size: 3em;
-      margin: 0;
-    }
-    header p {
-      font-size: 1.2em;
-      margin-top: 10px;
-    }
-
-    /* Navigation bar */
+    header h1 { font-size: 3em; margin: 0; }
+    header p { font-size: 1.2em; margin-top: 10px; }
     nav {
       display: flex;
       justify-content: center;
@@ -44,60 +33,44 @@
       text-align: center;
       font-weight: bold;
     }
-    nav a:hover {
-      background-color: #1B5E20;
-    }
-
-    /* Sections */
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    section:nth-child(even) {
-      background-color: #E8F5E9;
-    }
-    h2 {
-      color: #388E3C;
-      text-align: center;
-    }
-
-    /* Cards for content */
+    nav a:hover { background-color: #1B5E20; }
+    section { padding: 40px 20px; max-width: 900px; margin: auto; }
+    section:nth-child(even) { background-color: #E8F5E9; }
+    h2 { color: #388E3C; text-align: center; }
     .card {
       background-color: white;
       padding: 20px;
       margin: 20px 0;
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
-    .card img {
-      max-width: 100%;
-      border-radius: 10px;
-      margin-bottom: 15px;
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 12px rgba(0,0,0,0.2);
     }
-
-    /* Lists */
-    ul {
-      list-style-type: disc;
-      margin-left: 20px;
+    .card img { max-width: 100%; border-radius: 10px; margin-bottom: 15px; }
+    ul { list-style-type: disc; margin-left: 20px; }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
     }
-
-    /* Footer */
+    button:hover { background-color: #388E3C; }
     footer {
       text-align: center;
       padding: 30px;
       background-color: #C8E6C9;
       margin-top: 40px;
     }
-
-    /* Responsive images */
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 2em;
-      }
-      nav {
-        flex-direction: column;
-      }
+      header h1 { font-size: 2em; }
+      nav { flex-direction: column; }
     }
   </style>
 </head>
@@ -111,15 +84,15 @@
 <nav>
   <a href="#que-es">Qué es</a>
   <a href="#mantenerse-saludable">Mantenerse Saludable</a>
-  <a href="#comerciales">Comerciales</a>
-  <a href="#redes-sociales">Redes Sociales</a>
+  <a href="#quiz">Quiz</a>
+  <a href="#recursos">Recursos</a>
 </nav>
 
 <section id="que-es">
   <h2>Qué es la Salud y Nutrición</h2>
   <div class="card">
     <img src="https://cdn.pixabay.com/photo/2016/03/05/19/02/salad-1238255_1280.jpg" alt="Frutas y verduras">
-    <p>La salud y la nutrición son esenciales para que nuestro cuerpo funcione correctamente. Comer de manera equilibrada y mantenerse activo ayuda a prevenir enfermedades y mejorar nuestra calidad de vida.</p>
+    <p>La salud y la nutrición son esenciales para que nuestro cuerpo funcione correctamente. Comer equilibradamente y mantenerse activo ayuda a prevenir enfermedades y mejorar la calidad de vida.</p>
   </div>
 </section>
 
@@ -132,30 +105,47 @@
       <li>Beber suficiente agua</li>
       <li>Realizar actividad física regularmente</li>
       <li>Dormir lo suficiente</li>
-      <li>Evitar el consumo excesivo de comida chatarra</li>
+      <li>Evitar exceso de comida chatarra</li>
     </ul>
   </div>
 </section>
 
-<section id="comerciales">
-  <h2>Efectos de los Comerciales</h2>
+<section id="quiz">
+  <h2>Quiz: ¿Tus hábitos son saludables?</h2>
   <div class="card">
-    <img src="https://cdn.pixabay.com/photo/2017/06/14/21/26/junk-food-2400245_1280.jpg" alt="Comida chatarra">
-    <p>Los comerciales de alimentos poco saludables pueden influir en los niños y adolescentes, fomentando malos hábitos alimenticios y aumentando el riesgo de obesidad y otras enfermedades.</p>
+    <p>Pregunta: ¿Cuál de estos hábitos es más saludable?</p>
+    <button onclick="checkAnswer(this, true)">Comer frutas y verduras</button>
+    <button onclick="checkAnswer(this, false)">Comer solo dulces</button>
+    <button onclick="checkAnswer(this, false)">No beber agua</button>
+    <p id="quiz-result" style="font-weight:bold; margin-top:10px;"></p>
   </div>
 </section>
 
-<section id="redes-sociales">
-  <h2>Efecto de las Redes Sociales</h2>
+<section id="recursos">
+  <h2>Recursos</h2>
   <div class="card">
-    <img src="https://cdn.pixabay.com/photo/2015/03/26/09/44/social-media-690825_1280.jpg" alt="Redes sociales">
-    <p>El uso de redes sociales puede afectar la percepción de la imagen corporal y fomentar hábitos poco saludables. Es importante promover un consumo crítico y hábitos positivos sobre la salud y nutrición.</p>
+    <p>Aprende más sobre nutrición en estos sitios:</p>
+    <button onclick="window.open('https://www.who.int/es/health-topics/nutrition','_blank')">OMS Nutrición</button>
+    <button onclick="window.open('https://www.choosemyplate.gov/','_blank')">ChooseMyPlate</button>
   </div>
 </section>
 
 <footer>
   <p>&copy; 2026 Salud y Nutrición | Creado por Raven</p>
 </footer>
+
+<script>
+  function checkAnswer(btn, isCorrect) {
+    const result = document.getElementById('quiz-result');
+    if(isCorrect) {
+      result.textContent = "✅ ¡Correcto! Comer frutas y verduras es saludable.";
+      result.style.color = "green";
+    } else {
+      result.textContent = "❌ Incorrecto, intenta de nuevo.";
+      result.style.color = "red";
+    }
+  }
+</script>
 
 </body>
 </html>
