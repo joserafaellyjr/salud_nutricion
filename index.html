@@ -11,6 +11,8 @@
       padding: 0;
       background-color: #f9f9f9;
       color: #333;
+        padding-top: 60px; /* adjust based on nav height */
+
     }
 
 header {
@@ -31,10 +33,14 @@ header {
     header p { font-size: 1.2em; margin-top: 10px; }
 
     nav {
-      display: flex;
-      justify-content: center;
-      background-color: #2E7D32;
-      flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  background-color: #2E7D32;
+  flex-wrap: wrap;
+  position: fixed;   /* keeps it fixed at top */
+  top: 0;            /* at the very top */
+  width: 100%;       /* full width */
+  z-index: 1000;     /* stay above other content */
     }
     nav a {
       color: white;
