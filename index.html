@@ -57,11 +57,13 @@
       transform: scale(1.03);
       box-shadow: 0 8px 12px rgba(0,0,0,0.2);
     }
-    .card img {
-      max-width: 100%;
-      border-radius: 10px;
-      margin-bottom: 15px;
-    }
+.card img {
+  display: block;        /* centers the image */
+  margin: 0 auto 15px;   /* top/bottom spacing and center */
+  max-width: 80%;        /* keeps image smaller than section, prevents pixelation */
+  height: auto;          /* maintains aspect ratio */
+  border-radius: 10px;
+}
 
     ul { list-style-type: disc; margin-left: 20px; }
 
@@ -235,7 +237,62 @@
     <p>Hace un año me encontré una aplicación llamada YUKA que te dice si la comida que vas a comer es buena o mala; solo tienes que escanear el código de barras. Hay otras aplicaciones y consejos, pero también están los que hicieron las recetas. Encontré este influencer llamado Carlos Rios, conocido por el movimiento realfooding con 2 millones de seguidores en Instagram @realfooding. También puedes buscar canales que enseñan recetas nutritivas. También puedes investigar y mirar los ingredientes y ver los efectos. En conclusión, hay que ser muy cuidadoso cuando decides hacer una receta que encontraste en las redes sociales.</p>
   </div>
 </section>
+<section id="quiz">
+  <h2>¡Quiz de Nutrición y Salud!</h2>
+  <div class="card">
+    <form id="nutrition-quiz">
+      <p>🍎 1. ¿Cuál de estos alimentos da energía duradera?</p>
+      <input type="radio" name="q1" value="a"> Papas fritas<br>
+      <input type="radio" name="q1" value="b"> Avena integral<br>
+      <input type="radio" name="q1" value="c"> Dulces<br>
 
+      <p>😴 2. ¿Cuántas horas de sueño necesitan los niños para estar saludables?</p>
+      <input type="radio" name="q2" value="a"> 5-6 horas<br>
+      <input type="radio" name="q2" value="b"> 7-8 horas<br>
+      <input type="radio" name="q2" value="c"> 9-10 horas<br>
+
+      <p>💧 3. ¿Cuál es la mejor bebida para mantenerse hidratado?</p>
+      <input type="radio" name="q3" value="a"> Refresco<br>
+      <input type="radio" name="q3" value="b"> Agua<br>
+      <input type="radio" name="q3" value="c"> Jugos azucarados<br>
+
+      <p>📱 4. ¿Qué porcentaje de recetas en redes sociales son desnutritivas según Chrome?</p>
+      <input type="radio" name="q4" value="a"> 50%<br>
+      <input type="radio" name="q4" value="b"> 97.9%<br>
+      <input type="radio" name="q4" value="c"> 10%<br>
+
+      <p>💪 5. ¿Qué tipo de alimentos construye músculos y huesos fuertes?</p>
+      <input type="radio" name="q5" value="a"> Proteínas como huevos y pollo<br>
+      <input type="radio" name="q5" value="b"> Dulces<br>
+      <input type="radio" name="q5" value="c"> Bebidas azucaradas<br>
+
+      <br>
+      <button type="button" onclick="checkQuiz()">Enviar respuestas</button>
+    </form>
+    <p id="quiz-result" style="font-weight:bold; margin-top:15px;"></p>
+  </div>
+</section>
+
+<script>
+function checkQuiz() {
+  const answers = {
+    q1: 'b',
+    q2: 'c',
+    q3: 'b',
+    q4: 'b',
+    q5: 'a'
+  };
+  let score = 0;
+  for (let q in answers) {
+    const user = document.querySelector('input[name="'+q+'"]:checked');
+    if(user && user.value === answers[q]) score++;
+  }
+  document.getElementById('quiz-result').textContent = 
+    "¡Tu puntuación es " + score + " de 5!";
+}
+</script>
+  
+  
 <footer>
   <p> 2026 Salud y Nutrición | Creado por Alana, Brianna, Carlos, Jose</p>
 </footer>
