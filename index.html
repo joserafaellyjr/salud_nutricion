@@ -13,12 +13,20 @@
       color: #333;
     }
 
-    header {
-      background: linear-gradient(to right, #4CAF50, #81C784);
-      color: white;
-      text-align: center;
-      padding: 50px 20px;
-    }
+header {
+  /* Base gradient */
+  background: linear-gradient(to right, #4CAF50, #81C784),
+              url('images/bg.png');
+  background-size: 150px 150px; /* size of each icon tile */
+  background-repeat: repeat;     /* repeat pattern */
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+
+  /* Make the pattern semi-transparent */
+  background-blend-mode: overlay; /* blend the gradient and pattern */
+}
     header h1 { font-size: 3em; margin: 0; }
     header p { font-size: 1.2em; margin-top: 10px; }
 
