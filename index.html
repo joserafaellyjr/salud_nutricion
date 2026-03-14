@@ -12,6 +12,7 @@
       background-color: #f9f9f9;
       color: #333;
     }
+
     header {
       background: linear-gradient(to right, #4CAF50, #81C784);
       color: white;
@@ -20,6 +21,7 @@
     }
     header h1 { font-size: 3em; margin: 0; }
     header p { font-size: 1.2em; margin-top: 10px; }
+
     nav {
       display: flex;
       justify-content: center;
@@ -34,9 +36,15 @@
       font-weight: bold;
     }
     nav a:hover { background-color: #1B5E20; }
-    section { padding: 40px 20px; max-width: 900px; margin: auto; }
+
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
     section:nth-child(even) { background-color: #E8F5E9; }
-    h2 { color: #388E3C; text-align: center; }
+    h2 { color: #388E3C; text-align: center; margin-bottom: 20px; }
+
     .card {
       background-color: white;
       padding: 20px;
@@ -49,8 +57,14 @@
       transform: scale(1.03);
       box-shadow: 0 8px 12px rgba(0,0,0,0.2);
     }
-    .card img { max-width: 100%; border-radius: 10px; margin-bottom: 15px; }
+    .card img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
     ul { list-style-type: disc; margin-left: 20px; }
+
     button {
       background-color: #4CAF50;
       color: white;
@@ -62,12 +76,14 @@
       font-weight: bold;
     }
     button:hover { background-color: #388E3C; }
+
     footer {
       text-align: center;
       padding: 30px;
       background-color: #C8E6C9;
       margin-top: 40px;
     }
+
     @media (max-width: 600px) {
       header h1 { font-size: 2em; }
       nav { flex-direction: column; }
@@ -82,70 +98,122 @@
 </header>
 
 <nav>
-  <a href="#que-es">Qué es</a>
-  <a href="#mantenerse-saludable">Mantenerse Saludable</a>
-  <a href="#quiz">Quiz</a>
-  <a href="#recursos">Recursos</a>
+  <a href="#nutricion">Cómo funciona la nutrición</a>
+  <a href="#mantenerse">Como Mantenerse Saludable</a>
+  <a href="#comerciales">Efectos de los comerciales</a>
 </nav>
 
-<section id="que-es">
-  <h2>Qué es la Salud y Nutrición</h2>
+<section id="nutricion">
+  <h2>Cómo funciona la nutrición</h2>
   <div class="card">
-    <img src="https://cdn.pixabay.com/photo/2016/03/05/19/02/salad-1238255_1280.jpg" alt="Frutas y verduras">
-    <p>La salud y la nutrición son esenciales para que nuestro cuerpo funcione correctamente. Comer equilibradamente y mantenerse activo ayuda a prevenir enfermedades y mejorar la calidad de vida.</p>
+    <p>La buena salud nos hace sentir fuertes, felices y listos para divertirnos todos los días.
+    Nutrición significa comer los alimentos correctos que le dan a nuestro cuerpo la energía y
+    el poder que necesita para crecer, correr más rápido, saltar más alto y pensar mejor en la
+    escuela. Comer sano no solo es bueno para ti en este momento, también te ayuda a
+    mantenerte saludable, evitar enfermarte y convertirte en un adulto fuerte más adelante. Si
+    comes demasiados bocadillos azucarados o comida basura, es posible que te sientas
+    somnoliento y no muy fuerte, pero cuando tomas decisiones de alimentos inteligentes, tu
+    cuerpo funciona muy bien, ¡como una cadena de bicicleta con el aceite adecuado!</p>
+    
+    <p>Los nutrientes son lo que hace que la comida nos ayude tanto. Los macronutrientes nos
+    dan energía duradera, como los cereales integrales, como la avena y el arroz integral para
+    que no nos cansemos rápidamente, proteínas, como los huevos, el pollo, los frijoles y los
+    frutos secos que construyen músculos y huesos fuertes, y frutas y verduras coloridas que
+    están llenas de vitaminas y minerales para combatir los gérmenes y mantenernos
+    saludables. Los micronutrientes, como las vitaminas, vienen de esas frutas y verduras
+    brillantes de color arcoíris que se encuentran en su plato. Beber mucha agua todos los
+    días es muy importante porque mantiene todo en tu cuerpo funcionando sin problemas. Si
+    no obtienes suficiente de las cosas buenas o comes demasiado de las cosas malas,
+    podrías sentirte mal o no dar lo mejor de ti en la escuela o cuando juegas o haces deporte.
+    ¡Por eso es tan importante llevar una dieta equilibrada y elegir alimentos que te hagan
+    sentir increíble!</p>
+
+    <p>¡Imagen su plato como su súper estación de combustible para bailar, jugar al golf, al fútbol
+    y nadar! Rellena la mitad con frutas y verduras de colores, como pimientos rojos, brócoli
+    verde, maíz amarillo, uvas moradas, para darte vitaminas que combaten el cansancio y te
+    ayuden a recuperarte rápidamente de volteretas, patadas, columpios o golpes. Un cuarto
+    recibe granos integrales como el arroz integral, el pan integral o la pasta para una energía
+    constante que dura durante la práctica, los juegos o los largos baños. El último cuarto
+    carga proteínas, pollo, huevos, frijoles, pescado o tofu para construir piernas fuertes para
+    saltos y patadas, brazos poderosos para swings y golpes, y un núcleo duro para giros y
+    patadas de delfín. Agregue leche o yogur al lado para huesos súper fuertes. ¡Tu plato acaba
+    de convertirse en tu mejor compañero de equipo!</p>
+
+    <p>Los bocadillos mantienen tu poder entre la clase de baile, el golf, el fútbol o el tiempo de
+    natación, ¡sin chocar cuando necesitas brillar! Sáltate las patatas fritas y los dulces que te
+    ralentizan. En su lugar, tome mejoras divertidas, como rodajas de manzana con
+    mantequilla de maní, palitos de zanahoria y hummus, yogur con bayas o un puñado de
+    nueces. Estos mantienen las piernas hinchables, los brazos fuertes y el cerebro afilado
+    para contar pasos, leer greens, cronometrar patadas o dar vueltas de ritmo. El agua es
+    tu arma secreta, lleva tu botella a todas partes y bebe todo el día, especialmente cuando
+    estás sudando en clase, en el campo o en la piscina. ¡Los niños hidratados saltan más
+    alto, se balancean más suavemente, corren más rápido y nadan más fuerte!</p>
+
+    <p>¡Comer de esta manera TE convierte en la estrella de tu propia aventura deportiva!
+    El buen combustible te da movimientos más fuertes, un enfoque más nítido, más potencia
+    y energía extra para el baile, el golf, el fútbol, la natación y todo lo demás. Forma equipo
+    con tu familia para hacer pizzas vegetarianas, batidos arcoíris o un "desafío de plato de color",
+    ¡es divertido, no trabajo! Cuando comes de forma inteligente la mayoría de los días, te
+    recuperas más rápido, te mantienes saludable y te quedan toneladas de energía para
+    practicar o jugar más. Tú eres el jefe de tu combustible, así que decide qué tan increíble
+    quieres sentirte.</p>
   </div>
 </section>
 
-<section id="mantenerse-saludable">
-  <h2>Cómo Mantenerse Saludable</h2>
+<section id="mantenerse">
+  <h2>Como Mantenerse Saludable</h2>
   <div class="card">
-    <img src="https://cdn.pixabay.com/photo/2016/06/01/08/53/water-1434208_1280.jpg" alt="Agua y ejercicio">
-    <ul>
-      <li>Consumir frutas y verduras diariamente</li>
-      <li>Beber suficiente agua</li>
-      <li>Realizar actividad física regularmente</li>
-      <li>Dormir lo suficiente</li>
-      <li>Evitar exceso de comida chatarra</li>
-    </ul>
+    <p>Formas de lograr la salud a través de la nutrición
+    Lograr la salud a través de la nutrición puede ser tan simple como comer una comida
+    saludable tres veces por semana. Algunos alimentos saludables son el brócoli, coliflor,
+    zanahorias, espinacas, manzanas y naranjas. Estos son solo algunos ejemplos de
+    alimentos saludables, sin procesar, bajos en grasa, calorías y azúcar. Otra forma de
+    mantenerse sano es seguir una dieta, lo que significa que se establece un período de
+    tiempo durante el cual solo se consumen alimentos saludables y se evitan los alimentos
+    azucarados. Para la cena, siempre se debe incluir una porción de carbohidratos,
+    proteínas y verduras.</p>
+
+    <p>Dentro del ámbito de la nutrición, la hidratación es igual de importante. Una forma de
+    hidratarse correctamente es bebiendo líquidos a sorbos, en lugar de beberlos
+    rápidamente. Mantenerse hidratado es muy importante porque ayuda a transportar
+    nutrientes a las células y evita que el cuerpo confunda la sed con el hambre. Otra forma
+    de mejorar la salud es optimizando el sueño; esto significa asegurarse de dormir bien
+    durante la noche, lo que suele ser entre 9 y 10 horas. Es necesario dormir lo suficiente
+    porque la falta de sueño altera las hormonas que regulan el apetito.</p>
+
+    <p>Formas de mantenerse sano y fuerte
+    Una de las maneras de mantenerse sano y fuerte es haciendo ejercicio. Ejercicios es
+    muy importante porque ayuda a transportar oxígeno y nutrientes a los tejidos, lo que
+    esta permite que el sistema cardiovascular funcione de manera más eficiente. Incluso
+    ejercitar el cerebro es una forma; puedes hacerlo resolviendo acertijos, juegos
+    mentales y leyendo. Ejercitar el cerebro es muy importante porque ayuda a mejorar la
+    memoria y puede aliviar la ansiedad o la depresión.</p>
+
+    <p>Otra forma de ejercitar el cerebro y cuidar la salud cerebral es la meditación. La
+    meditación es muy importante porque puede aumentar la materia gris en áreas del
+    cerebro relacionadas con el aprendizaje y la regulación de las emociones. La salud
+    cerebral y el ejercicio mental son tan importantes como el ejercicio físico, ya que el
+    cerebro también es un músculo que aprende. Si te gusta el ejercicio físico,
+    probablemente prefieras ir al gimnasio o caminar 20 minutos al día. Estas son algunas
+    formas de ejercicio que puedes practicar tanto para la salud cerebral como para la
+    físico.</p>
   </div>
 </section>
 
-<section id="quiz">
-  <h2>Quiz: ¿Tus hábitos son saludables?</h2>
+<section id="comerciales">
+  <h2>Efectos de los comerciales en la salud</h2>
   <div class="card">
-    <p>Pregunta: ¿Cuál de estos hábitos es más saludable?</p>
-    <button onclick="checkAnswer(this, true)">Comer frutas y verduras</button>
-    <button onclick="checkAnswer(this, false)">Comer solo dulces</button>
-    <button onclick="checkAnswer(this, false)">No beber agua</button>
-    <p id="quiz-result" style="font-weight:bold; margin-top:10px;"></p>
-  </div>
-</section>
+    <p>¿Alguna vez has visto un comercial en la televisión? ¿Has querido comer la comida que aparece ahí? Si es así, entonces has sido afectado por el marketing digital. El marketing digital consiste en anuncios que se usan en internet y medios digitales para promocionar productos, servicios o marcas. La mayoría de las veces emplean frases y palabras llamativas para captar la atención. Esto puede ser bueno o malo porque podría llevarte a comprar mejores productos, pero a veces también hace que compres cosas que no necesitas o, incluso peor, cosas dañinas para la salud. Un buen ejemplo de esto es con las compras de comida chatarra...</p>
 
-<section id="recursos">
-  <h2>Recursos</h2>
-  <div class="card">
-    <p>Aprende más sobre nutrición en estos sitios:</p>
-    <button onclick="window.open('https://www.who.int/es/health-topics/nutrition','_blank')">OMS Nutrición</button>
-    <button onclick="window.open('https://www.choosemyplate.gov/','_blank')">ChooseMyPlate</button>
+    <p>La publicidad comercial en televisión expone a los niños y adolescentes españoles a un promedio de 82 anuncios de alimentos y bebidas por semana, de los cuales 67 (81,8 %) corresponden a productos poco saludables. Esto significa que los jóvenes ven alrededor de diez anuncios diarios que promocionan alimentos y bebidas con alto contenido de azúcar, grasa o sal...</p>
+
+    <p>Para concluir este estudio, sugiere que la alta exposición al marketing de alimentos poco saludables puede contribuir a malos hábitos alimenticios en la infancia. Los expertos en salud pública consideran que una publicidad tan frecuente influye en las preferencias y elecciones alimentarias con el tiempo...</p>
   </div>
 </section>
 
 <footer>
-  <p>2026 Salud y Nutrición | Creado por Alana, Brianna, Carlos, Jose</p>
+  <p>&copy; 2026 Salud y Nutrición | Creado por Raven</p>
 </footer>
-
-<script>
-  function checkAnswer(btn, isCorrect) {
-    const result = document.getElementById('quiz-result');
-    if(isCorrect) {
-      result.textContent = "✅ ¡Correcto! Comer frutas y verduras es saludable.";
-      result.style.color = "green";
-    } else {
-      result.textContent = "❌ Incorrecto, intenta de nuevo.";
-      result.style.color = "red";
-    }
-  }
-</script>
 
 </body>
 </html>
