@@ -20,6 +20,15 @@
     padding-top: 180px; /* enough space for nav + header padding */
   }
 }
+    html {
+  scroll-padding-top: 160px; /* roughly the height of your mobile nav + header spacing */
+}
+    @media (min-width: 601px) {
+  html { scroll-padding-top: 60px; } /* desktop */
+}
+@media (max-width: 600px) {
+  html { scroll-padding-top: 180px; } /* mobile */
+}
     
 header {
   background-image: url("images/bg.png");
