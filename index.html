@@ -15,44 +15,47 @@
 
     }
     
-@media (max-width: 600px) {
-
 header {
   background-image: url("images/bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-  padding: 80px 20px;
+  padding: 100px 20px;
   text-align: center;
+  position: relative;
+  color: #2E7D32;
 }
-header h1 {
-  display: inline-block;
 
-  padding: 18px 40px;
+header h1, header p {
+  display: inline-block;
+  padding: 20px 40px;
   border-radius: 14px;
-
-  color: #2E7D32;
-  font-size: 48px;
-
-  background: rgba(255,255,255,0.55);
-  backdrop-filter: blur(6px);
-
+  background: rgba(255, 255, 255, 0.65); /* more opaque for visibility */
+  backdrop-filter: blur(8px); /* glass effect */
   box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  margin: 10px 0;
 }
+
+header h1 {
+  font-size: 48px;
+}
+
 header p {
-  display: inline-block;
-
-  margin-top: 12px;
-  padding: 12px 28px;
-
-  border-radius: 12px;
-
-  background: rgba(255,255,255,0.45);
-  backdrop-filter: blur(6px);
-
-  color: #2E7D32;
+  font-size: 20px;
 }
+
+@media (max-width: 600px) {
+  header {
+    padding: 80px 20px;
+  }
+  header h1 {
+    font-size: 2em;
+    padding: 15px 25px;
+  }
+  header p {
+    font-size: 1em;
+    padding: 12px 20px;
+  }
 }
     nav {
   display: flex;
