@@ -14,6 +14,12 @@
         padding-top: 60px; /* adjust based on nav height */
 
     }
+
+    @media (max-width: 600px) {
+  body {
+    padding-top: 180px; /* enough space for nav + header padding */
+  }
+}
     
 header {
   background-image: url("images/bg.png");
@@ -23,6 +29,7 @@ header {
   padding: 100px 20px;
   text-align: center;
   position: relative;
+  z-index: 500;
 }
 
 header h1, header p {
@@ -107,7 +114,7 @@ header p {
       padding: 40px 20px;
       max-width: 900px;
       margin: auto;
-      background-color: #E8F5E9;
+     
     }
     
     h2 { color: #388E3C; text-align: center; margin-bottom: 20px; }
