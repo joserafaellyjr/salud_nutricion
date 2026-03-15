@@ -26,13 +26,21 @@ header {
 }
 
 header h1, header p {
-  display: inline-block;
+  display: block;              /* stack vertically */
+  margin: 10px auto;           /* center horizontally */
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.65); /* opaque enough to read */
+  background: rgba(255, 255, 255, 0.65);
   backdrop-filter: blur(8px);
   box-shadow: 0 6px 16px rgba(0,0,0,0.15);
-  margin: 10px 0;
   color: #2E7D32;
+  text-align: center;          /* make text itself centered */
+}
+
+section h2 {
+  display: block;              /* ensure it’s a block */
+  text-align: center;          /* center the text */
+  color: #388E3C;
+  margin-bottom: 20px;
 }
 
 header h1 {
